@@ -198,6 +198,18 @@ body.active {
   width: 100%;
 }
 
+.text { font-size: var(--fs-5);}
+
+.img-holder {
+  aspect-ratio: var(--witdth) / var(--height) ;
+  background-color: var(--light-gray);
+  overflow: hidden;
+}
+
+.section-text { margin-block: 15px 35px;}
+
+
+
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -368,18 +380,73 @@ body.active {
   #ABOUT
 \*-----------------------------------*/
 
+.about .container {
+  display: grid;
+  gap: 30px;
+}
 
+.about-subtitle {
+  font-size: var(--fs-4);
+  color: var(--medium-spring-green);
+}
 
+.about .section-text { margin-block: 8px 15px;}
 
+.about-list { margin-block-start: 30px;}
+.about-item { 
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding-block: 15px;
+}
+
+.about .item-img {
+  flex-shrink: 0;
+  border-radius: var(--radius-circle);
+}
+.about .item-title { margin-block-end: 5px;}
 
 /*-----------------------------------*\
   #SERVICE
 \*-----------------------------------*/
 
+.service { text-align: center; }
 
+.service-list {
+  display: grid;
+  gap: 10px;
+}
 
+.service-card {
+  background-color: var(--oxford-blue_50);
+  padding: 20px;
+  border-radius: var(--radius-6);
+  transition: var(--transition-1);
+}
 
+.service-card .card-banner {
+  max-width: max-content;
+  margin-inline: auto;
+  border-radius: var(--radius-circle);
+}
 
+.service-card .card-banner img {
+  width: 95px;
+}
+.service-card .card-title { margin-block: 20px 5px;}
+
+.service-card :is(.card-title, .card-text ) { transition: var(--transition-1);}
+
+.service-card:hover {
+  background-color: var(--white);
+  transform: translateY(-5px);
+}
+.service-card:hover .card-title {
+  color: var(--black);
+}
+.service-card:hover .card-text {
+  color: var(--dim-gray);
+}
 /*-----------------------------------*\
   #DOCTOR
 \*-----------------------------------*/
